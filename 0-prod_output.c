@@ -75,7 +75,7 @@ int _puts(char *str)
  * @c: Character to be printed.
  * Return: 1 (success).
  */
-int putchar(int i)
+int putchar(int c)
 {
-	return fputs(int, stdout);
+	return (fputs(int, stdout));
 }
