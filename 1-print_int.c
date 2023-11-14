@@ -15,7 +15,10 @@ int print_int(va_list args)
 
 	if (last < 0)
 	{
-		_Pitchar('-');
+		/**
+		 * _Pitchar -> _putchar
+		 */
+		_putchar('-');
 		num = -num;
 		n = -n;
 		last = -last;
@@ -50,7 +53,10 @@ int print_int(va_list args)
  */
 int print_dec(va_list arg)
 {
-	int n = va_args(args, int);
+	/**
+	 * va_args -> va_arg
+	 */
+	int n = va_arg(args, int);
 	int num, last = n % 10, digit, exp = 1;
 	int y = 1;
 
@@ -79,10 +85,15 @@ int print_dec(va_list arg)
 			_putchar(digit + '0');
 			num = num - (digit * exp);
 			exp = exp / 10;
-			i++;
+			/**
+			 * i++ -> y++
+			 */
+			y++;
 		}
 	}
 	_putchar(last + '0');
-
-	return (i);
+/**
+ * return (i) -> return (y)
+ */
+	return (y);
 }

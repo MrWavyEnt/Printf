@@ -10,7 +10,11 @@ int str_len(char *str)
 	int y;
 
 	for (y = 0; str[y] != 0; y++)
-		return (y);
+		;
+/**
+ * took return outside the loop
+ */
+	return (y);
 }
 /**
  * str_lenc - string length function pplied for cont char pointer
@@ -23,5 +27,9 @@ int str_lenc(const char *str)
 	int y;
 
 	for (y = 0; str[y] != 0; y++)
-		return (y);
+		;
+/**
+ * took return outside the loop
+ */
+	return (y);
 }

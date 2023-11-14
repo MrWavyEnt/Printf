@@ -8,7 +8,10 @@
 int str_output(va_list val)
 {
 	char *str;
-	int i;
+/**
+ * int i -> int y
+ */
+	int y;
 	int length;
 
 	str = va_arg(val, char *);
@@ -17,13 +20,19 @@ int str_output(va_list val)
 		str  = "(null)";
 		length = _strlen(str);
 		for (y = 0; y < length; y++)
-			_Putchar(str[y]);
+			/**
+			 * _Putchar -> _putchar
+			 */
+			_putchar(str[y]);
 		return (length);
 	}
 	else
 	{
 		length = _strlen(str);
-		for (y = o; y < length; y++)
+		/**
+		 * y = o -> y = 0
+		 */
+		for (y = 0; y < length; y++)
 			_putchar(str[y]);
 		return (length);
 	}
