@@ -11,7 +11,10 @@ int print_bin(va_list val)
 	int count = 0;
 	int y;
 
-	x = 1;
+	/**
+	 * x = 1 -> int x = 1
+	 */
+	int x = 1;
 	int z;
 
 	unsigned int num = va_arg(val, unsigned int);
@@ -24,7 +27,14 @@ int print_bin(va_list val)
 			flag = 1;
 		if (flag)
 		{
-			z = r >> (31 - i);
+			/**
+			 * i -> y
+			 * and this z is never used at all
+			 */
+			z = r >> (31 - y);
+			/**
+			 * recheck whats this b's purpose
+			 */
 			_putchar(b + 48);
 			count++;
 		}
