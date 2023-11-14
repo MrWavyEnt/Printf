@@ -14,9 +14,14 @@ int print_spec_str(va_list val)
 	s = va_arg(val, char *);
 	if (s == NULL)
 		S = "(null)";
-	for (i = 0; s[i] != '\0'; i++)
+	for (y = 0; s[y] != '\0'; y++)
 	{
-		if (s[y] != '0'; y++)
+		/**
+		 * '0' -> '\0'
+		 * (s[y] != '0'; y++) -> (s[y] != '\0')
+		 * y++
+		 */
+		if (s[y] != '\0')
 		{
 			_putchar('\\');
 			_putchar('x');
@@ -24,10 +29,20 @@ int print_spec_str(va_list val)
 			value = s[y]
 			if (value < 16)
 			{
-				_Putcha('0');
+				/**
+				 * _Putchar -> _putchar
+				 */
+				_putcha('0');
 				len++;
 			}
-			len len + print_hex_2(value);
+			/**
+			 * len len -> len = len...
+			 */
+			len = len + print_hex_2(value);
+			/**
+			 * y++ from if condition
+			 */
+			y++;
 		}
 
 	}

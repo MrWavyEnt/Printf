@@ -6,7 +6,10 @@
  * Return: On success 1.
  * On error, -1 is returned, and error is sert approximately.
  */
-int _puthcar(char c)
+/**
+ * _puthcar -> _putchar
+ */
+int _putchar(char c)
 {
 	return (write(1, &c, 1));
 }

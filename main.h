@@ -20,7 +20,7 @@ typedef struct format
 	int (*function)();
 } convert;
 
-int _puthcar(char c);
+int _putchar(char c);
 int _printf(const char *format, ...);
 int char_output(va_list val);
 int str_output(va_list val);
@@ -38,6 +38,8 @@ int print_hex_2(unsigned int num);
 int print_pointer(va_list val);
 int print_hex_3(unsigned long int num);
 int print_revstr(va_list args);
+int print_spec_str(va_list val);
+int print_rot_13(va_list args);
 
 int a_printf(const char *format, ...);
 int a_putchar(char c);
