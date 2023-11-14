@@ -5,6 +5,7 @@
 #include <stdarg.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 
 /**
  * struct format - converter for printf
@@ -36,6 +37,9 @@ int print_hex_1(unsigned int num);
 int print_hex_2(unsigned int num);
 int print_pointer(va_list val);
 int print_hex_3(unsigned long int num);
-int print_revstr(va_list args)
+int print_revstr(va_list args);
+
+int a_printf(const char *format, ...);
+int a_putchar(char c);
 
 #endif
