@@ -10,6 +10,9 @@ int print_string(char *str)
 	int length = 0;
 	int i;
 
+	if (str == NULL)
+		return (6);
+
 	for (i = 0; str[i] != '\0'; i++)
 		length++;
 
