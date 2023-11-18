@@ -1,5 +1,10 @@
 #include "main.h"
 
+/**
+ * print_string - print a string
+ * @str: input string
+ * Return: Alway length
+ */
 int print_string(char *str)
 {
 	int length = 0;
