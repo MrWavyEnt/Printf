@@ -27,10 +27,16 @@ int _printf(const char *format, ...)
 					break;
 				case '%':
 					counter += _putchar('%');
-						break;
+					break;
 				case 'c':
 					counter += _putchar(va_arg(args, int));
 					break;
+				/* case 'd':
+					counter += print_decimal(va_arg(args, double));
+					break;
+				case 'i':
+					counter += print_hex(va_arg(args, int));
+					break; */
 				default:
 					counter += _putchar('%');
 					counter += _putchar(*format);
