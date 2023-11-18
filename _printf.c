@@ -37,8 +37,7 @@ int _printf(const char *format, ...)
 					break;
 			}
 			format++;
-		}
-		else
+		} else
 		{
 			counter += _putchar(*format);
 			format++;
